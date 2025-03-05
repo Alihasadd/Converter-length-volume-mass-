@@ -4,14 +4,21 @@
 1 kg = 2.204 pounds
 */
 
+
+const defaultInput = input.textContent
+console.log(Number(defaultInput).textContent = 1)
+
+
 document.getElementById("button").addEventListener("click", (event) => {
   event.preventDefault()
-
+  
   const input = document.getElementById("input").valueAsNumber
+  
+  const validInput = isNaN(input) ? 1 : input;
 
-  const feetPerMeter = 3.281
-  const gallonsPerLiter = 0.264
-  const poundsPerKg = 2.204
+  const feetPerMeter = 3.281;
+  const gallonsPerLiter = 0.264;
+  const poundsPerKg = 2.204;
 
   const feet = (input * feetPerMeter).toFixed(3)
   const meters = (input / feetPerMeter).toFixed(3)
@@ -23,8 +30,13 @@ document.getElementById("button").addEventListener("click", (event) => {
 //Make turnary for meter vs meters or foot vs feet 
 const meterUnit = input === 1 ? "meter" : "meters"
 const feetUnit = input === 1 ? "foot" : "feet"
+const gallonUnit = input === 1 ? "gallon" : "gallons"
+const literUnit = input === 1 ? "liter" : "liters"
+const kiloUnit = input === 1 ? "kilogram" : "kilogram"
+const poundUnit = input === 1 ? "pound" : "pounds"
 
-  document.getElementById("length").textContent = `${input} ${meterUnit} = ${meters} | ${input} ${feetUnit} = ${feet} feet`
-  document.getElementById("volume").textContent = `${input} liter(s) = ${liters} | ${input} gallons(s) = ${gallons} gallon(s)`
-  document.getElementById("mass").textContent = `${input} Kilograms(s) = ${kg} | ${input} pounds(s) = ${pounds} pounds(s)`
+  document.getElementById("length").textContent = `${input} ${meterUnit} = ${feet} ${feetUnit} | ${input} ${feetUnit} = ${meters} meters`
+  document.getElementById("volume").textContent = `${input} ${literUnit} = ${gallons} ${gallonUnit} | ${input} ${gallonUnit} = ${liters} ${literUnit}`
+  document.getElementById("mass").textContent = `${input} ${kiloUnit} = ${kg} ${poundUnit} | ${input} ${poundUnit} = ${pounds} ${kiloUnit}`
+  
 })
