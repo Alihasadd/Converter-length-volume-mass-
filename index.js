@@ -15,18 +15,18 @@ document.getElementById("button").addEventListener("click", (event) => {
 
   const input = document.getElementById("input").valueAsNumber;
 
-  const validInput = isNaN(input) ? 1 : input;
+  const validInput = isNaN(input) ? 1 : input; //if input is not a number, default to 1
 
   const feetPerMeter = 3.281;
   const gallonsPerLiter = 0.264;
   const poundsPerKg = 2.204;
 
-  const feet = (input * feetPerMeter).toFixed(3);
-  const meters = (input / feetPerMeter).toFixed(3);
-  const gallons = (input * gallonsPerLiter).toFixed(3);
-  const liters = (input / gallonsPerLiter).toFixed(3);
-  const pounds = (input * poundsPerKg).toFixed(3);
-  const kg = (input / poundsPerKg).toFixed(3);
+  const feet = (validInput * feetPerMeter).toFixed(3);
+  const meters = (validInput / feetPerMeter).toFixed(3);
+  const gallons = (validInput * gallonsPerLiter).toFixed(3);
+  const liters = (validInput / gallonsPerLiter).toFixed(3);
+  const pounds = (validInput * poundsPerKg).toFixed(3);
+  const kg = (validInput / poundsPerKg).toFixed(3);
 
   //Make turnary for meter vs meters or foot vs feet
   const meterUnit = input === 1 ? "meter" : "meters";
