@@ -29,20 +29,20 @@ document.getElementById("button").addEventListener("click", (event) => {
   const kg = (validInput / poundsPerKg).toFixed(3);
 
   //Make turnary for meter vs meters or foot vs feet
-  const meterUnit = input === 1 ? "meter" : "meters";
-  const feetUnit = input === 1 ? "foot" : "feet";
-  const gallonUnit = input === 1 ? "gallon" : "gallons";
-  const literUnit = input === 1 ? "liter" : "liters";
-  const kiloUnit = input === 1 ? "kilogram" : "kilogram";
-  const poundUnit = input === 1 ? "pound" : "pounds";
+  const meterUnit = validInput === 1 ? "meter" : "meters";
+  const feetUnit = validInput === 1 ? "foot" : "feet";
+  const gallonUnit = validInput === 1 ? "gallon" : "gallons";
+  const literUnit = validInput === 1 ? "liter" : "liters";
+  const kiloUnit = validInput === 1 ? "kilogram" : "kilogram";
+  const poundUnit = validInput === 1 ? "pound" : "pounds";
 
   document.getElementById(
     "length"
-  ).textContent = `${input} ${meterUnit} = ${feet} ${feetUnit} | ${input} ${feetUnit} = ${meters} meters`;
+  ).textContent = `${validInput} ${meterUnit} = ${feet} ${feetUnit} | ${validInput} ${feetUnit} = ${meters} meters`;
   document.getElementById(
     "volume"
-  ).textContent = `${input} ${literUnit} = ${gallons} ${gallonUnit} | ${input} ${gallonUnit} = ${liters} ${literUnit}`;
+  ).textContent = `${validInput} ${literUnit} = ${gallons} ${gallonUnit} | ${validInput} ${gallonUnit} = ${liters} ${literUnit}`;
   document.getElementById(
     "mass"
-  ).textContent = `${input} ${kiloUnit} = ${kg} ${poundUnit} | ${input} ${poundUnit} = ${pounds} ${kiloUnit}`;
+  ).textContent = `${validInput} ${kiloUnit} = ${kg} ${poundUnit} | ${validInput} ${poundUnit} = ${pounds} ${kiloUnit}`;
 });
