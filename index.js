@@ -28,7 +28,7 @@ document.getElementById("button").addEventListener("click", (event) => {
   const pounds = (validInput * poundsPerKg).toFixed(3);
   const kg = (validInput / poundsPerKg).toFixed(3);
 
-  //Make turnary for meter vs meters or foot vs feet
+  //Make ternary for meter vs meters or foot vs feet
   const meterUnit = validInput === 1 ? "meter" : "meters";
   const feetUnit = validInput === 1 ? "foot" : "feet";
   const gallonUnit = validInput === 1 ? "gallon" : "gallons";
