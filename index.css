@@ -79,7 +79,7 @@ button {
 section {
   margin: 15px 30px;
   padding: 15px;
-  border-top-left-radius: 4.68px;
+  border-radius: 5px;
   background-color: #ffffff;
   color: #5a537b;
   display: flex;
