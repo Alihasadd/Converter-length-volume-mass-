@@ -6,25 +6,29 @@
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     </head>
     <body>
-        <div id="header">
-            <h1>Metric/Imperial Unit Conversion</h1>
-            <form>
-                <input id="input" type="number" min="0" placeholder="1" required></input>
-                <button id="button" type="submit">Convert</button>
-            </form>
+        <div id="item">
+            <div id="header">
+                <h1>Metric/Imperial Unit Conversion</h1>
+                <form>
+                    <input id="input" type="number" min="0" placeholder="1" required></input>
+                    <button id="button" type="submit">Convert</button>
+                </form>
+            </div>
+            <div id="lower"> 
+            <section>
+                <span>Length (Meter/Feet)</span>
+                <p id="length"></p>
+            </section>
+            <section>
+            <span>Volume (Liters/Gallons)</span>         
+                <p id="volume"></p>
+            </section>
+            <section>
+                <span>Mass (Kilograms/Pounds)</span>
+                <p id="mass"></p>
+            </section>
+            </div>
         </div>
-        <section>
-            <span>Length (Meter/Feet)</span>
-            <p id="length"></p>
-        </section>
-        <section>
-          <span>Volume (Liters/Gallons)</span>         
-            <p id="volume"></p>
-        </section>
-        <section>
-            <span>Mass (Kilograms/Pounds)</span>
-            <p id="mass"></p>
-        </section>
         <script src="index.js"></script>
     </body>
 </html>
